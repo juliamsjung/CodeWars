@@ -25,7 +25,7 @@ public class prob00 {
 			in.close();
 			out.close();
 			System.out.println( i + " ");
-			Check.check("out.txt", file + "-"+ i + "-in.txt" );
+			Check.check("out.txt", file + "-"+ i + "-out.txt" );
 		}
 	
 	}

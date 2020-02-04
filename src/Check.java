@@ -9,10 +9,10 @@ public class Check {
 		int line = 0;
 		int wrong = 0;
 		
-		while(mine.hasNext() && correct.hasNext()) {
+		while(mine.hasNextLine() && correct.hasNextLine()) {
 			line++;
-			if(!mine.hasNextLine() && correct.hasNextLine()) {
-				System.out.println("Wrong: "+ line);
+			if(!mine.nextLine().equals(correct.nextLine())) {
+				System.out.println("Wrong: " + line);
 				wrong ++;
 			}
 		}

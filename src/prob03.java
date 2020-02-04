@@ -1,8 +1,9 @@
+
 import java.util.*;
 import java.io.*;
-public class prob02 {
+public class prob03 {
 	
-	static String file = "prob02";
+	static String file = "prob03";
 	static Scanner in;
 	static PrintWriter out;
 	public static void main(String[] args) throws IOException{
@@ -31,16 +32,11 @@ public class prob02 {
 		
 	}
 	private static void solve(){
-		int H = in.nextInt();
-		int M = in.nextInt();
-		int S = in.nextInt();
+		double n = in.nextDouble();
+		n = n * n * 3.14159;
+		n = n * 3 / 4;
 		
-		if(M/(double)H>S) {
-			out.println(H + " " + M + " " + S + ". I will be late!");
-		}else {
-			out.println(H + " " + M + " " + S + ". I will make it!");
-		}
-		
+		out.printf("%.2f\n", n);
 	}
 	
 	

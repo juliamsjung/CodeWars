@@ -1,8 +1,8 @@
 import java.util.*;
 import java.io.*;
-public class prob02 {
+public class prob04 {
 	
-	static String file = "prob02";
+	static String file = "prob04";
 	static Scanner in;
 	static PrintWriter out;
 	public static void main(String[] args) throws IOException{
@@ -12,7 +12,7 @@ public class prob02 {
 			in = new Scanner(new File(file + "-"+ i + "-in.txt"));
 			out = new PrintWriter (new File("out.txt"));
 			
-			int n =1;
+			int n = Integer.parseInt(in.nextLine());
 			
 			for(int j =0; j < n ; j++) {
 				init();
@@ -29,18 +29,19 @@ public class prob02 {
 	
 	private static void init() {
 		
+		
 	}
 	private static void solve(){
-		int H = in.nextInt();
-		int M = in.nextInt();
-		int S = in.nextInt();
+		double tax = in.nextDouble()/100;
+		double total = in.nextDouble();
+		double pretax = total / (tax +1);
+		double ans = pretax * tax;
 		
-		if(M/(double)H>S) {
-			out.println(H + " " + M + " " + S + ". I will be late!");
-		}else {
-			out.println(H + " " + M + " " + S + ". I will make it!");
-		}
-		
+		out.print("On your $");
+		out.printf("%.2f", total);
+		out.print(" purchase, the tax amount is $" );
+		out.printf("%.2f", ans);
+		out.println("");
 	}
 	
 	
